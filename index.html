@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Flow Tracker</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Cash Flow Tracker</h1>
+
+        <form id="expense-form">
+
+            <input
+                type="number"
+                id="salary"
+                placeholder="Enter Total Salary"
+            >
+
+            <input
+                type="text"
+                id="expense-name"
+                placeholder="Enter Expense Name"
+            >
+
+            <input
+                type="number"
+                id="expense-amount"
+                placeholder="Enter Expense Amount"
+            >
+
+            <button type="submit">
+                Add Expense
+            </button>
+
+        </form>
+
+        <p id="error-message"></p>
+
+        <hr>
+
+        <h2>
+            Salary:
+            <span id="salary-display">₹0</span>
+        </h2>
+
+        <h3>Expenses</h3>
+
+        <ul id="expense-list"></ul>
+
+        <h3>
+            Total Expenses:
+            <span id="total-expenses">₹0</span>
+        </h3>
+
+        <h2>
+            Remaining Balance:
+            <span id="balance">₹0</span>
+        </h2>
+        <canvas id="expense-chart"></canvas>
+
+        <div id="warning-banner"></div>
+
+        <button id="download-report">
+            Download Report
+        </button>
+
+        <select id="currency-select">
+            <option value="INR">INR (₹)</option>
+             <option value="USD">USD ($)</option>
+             <option value="EUR">EUR (€)</option>
+             <option value="GBP">GBP (£)</option>
+            <option value="JPY">JPY (¥)</option>
+             <option value="AUD">AUD (A$)</option>
+             <option value="CAD">CAD (C$)</option>
+        </select>
+
+
+    </div>
+
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
